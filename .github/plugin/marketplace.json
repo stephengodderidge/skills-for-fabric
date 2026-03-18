@@ -15,20 +15,20 @@
       "description": "Complete bundle: all Microsoft Skills for Fabric for developers and consumers",
       "version": "0.2.6",
       "skills": [
-        "./skills/check-updates",
-        "./skills/powerbi-consumption-cli",
-        "./skills/sqldw-consumption-cli",
-        "./skills/sqldw-authoring-cli",
-        "./skills/spark-consumption-cli",
-        "./skills/spark-authoring-cli",
-        "./skills/eventhouse-consumption-cli",
-        "./skills/eventhouse-authoring-cli",
-        "./skills/e2e-medallion-architecture"
+        "../../skills/check-updates",
+        "../../skills/powerbi-consumption-cli",
+        "../../skills/sqldw-consumption-cli",
+        "../../skills/sqldw-authoring-cli",
+        "../../skills/spark-consumption-cli",
+        "../../skills/spark-authoring-cli",
+        "../../skills/eventhouse-consumption-cli",
+        "../../skills/eventhouse-authoring-cli",
+        "../../skills/e2e-medallion-architecture"
       ],
       "agents": [
-        "./agents/FabricAdmin.agent.md",
-        "./agents/FabricDataEngineer.agent.md",
-        "./agents/FabricAppDev.agent.md"
+        "../../agents/FabricAdmin.agent.md",
+        "../../agents/FabricDataEngineer.agent.md",
+        "../../agents/FabricAppDev.agent.md"
       ],
       "keywords": [
         "fabric",
@@ -49,16 +49,16 @@
       "description": "Developer skills for authoring Microsoft Skills for Fabric solutions - SDKs, APIs, automation scripts, CI/CD",
       "version": "0.2.6",
       "skills": [
-        "./skills/check-updates",
-        "./skills/sqldw-authoring-cli",
-        "./skills/spark-authoring-cli",
-        "./skills/eventhouse-authoring-cli",
-        "./skills/e2e-medallion-architecture"
+        "../../skills/check-updates",
+        "../../skills/sqldw-authoring-cli",
+        "../../skills/spark-authoring-cli",
+        "../../skills/eventhouse-authoring-cli",
+        "../../skills/e2e-medallion-architecture"
       ],
       "agents": [
-        "./agents/FabricAdmin.agent.md",
-        "./agents/FabricDataEngineer.agent.md",
-        "./agents/FabricAppDev.agent.md"
+        "../../agents/FabricAdmin.agent.md",
+        "../../agents/FabricDataEngineer.agent.md",
+        "../../agents/FabricAppDev.agent.md"
       ],
       "mcpServers": {},
       "repository": "https://github.com/microsoft/skills-for-fabric",
@@ -79,16 +79,16 @@
       "description": "Consumer skills for interactive Microsoft Skills for Fabric operations - queries, exploration, monitoring",
       "version": "0.2.6",
       "skills": [
-        "./skills/check-updates",
-        "./skills/powerbi-consumption-cli",
-        "./skills/sqldw-consumption-cli",
-        "./skills/spark-consumption-cli",
-        "./skills/eventhouse-consumption-cli"
+        "../../skills/check-updates",
+        "../../skills/powerbi-consumption-cli",
+        "../../skills/sqldw-consumption-cli",
+        "../../skills/spark-consumption-cli",
+        "../../skills/eventhouse-consumption-cli"
       ],
       "agents": [
-        "./agents/FabricAdmin.agent.md",
-        "./agents/FabricDataEngineer.agent.md",
-        "./agents/FabricAppDev.agent.md"
+        "../../agents/FabricAdmin.agent.md",
+        "../../agents/FabricDataEngineer.agent.md",
+        "../../agents/FabricAppDev.agent.md"
       ],
       "mcpServers": {},
       "repository": "https://github.com/microsoft/skills-for-fabric",
