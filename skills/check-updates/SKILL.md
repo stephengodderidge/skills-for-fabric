@@ -196,6 +196,6 @@ Users can manually check for updates at any time:
 
 ## Reference
 
-- **GitHub Repository**: https://github.com/microsoft/skills-for-fabric
-- **Releases**: https://github.com/microsoft/skills-for-fabric/releases
+- **GitHub Repository**: https://github.com/stephengodderidge/skills-for-fabric
+- **Releases**: https://github.com/stephengodderidge/skills-for-fabric/releases
 - **CHANGELOG**: See `CHANGELOG.md` in repository root

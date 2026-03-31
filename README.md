@@ -6,7 +6,7 @@
 
 Optimized for **GitHub Copilot CLI**, with cross‑tool compatibility for **VS Code Copilot, Claude Code, Cursor, Codex/Jules, and Windsurf**.
 
-[📘 Documentation](https://learn.microsoft.com/fabric) • [🔐 Security](SECURITY.md) • [🤝 Contributing](CONTRIBUTING.md) • [🐞 Report a Bug](https://github.com/microsoft/skills-for-fabric/issues/new?template=bug_report.md)
+[📘 Documentation](https://learn.microsoft.com/fabric) • [🔐 Security](SECURITY.md) • [🤝 Contributing](CONTRIBUTING.md) • [🐞 Report a Bug](https://github.com/stephengodderidge/skills-for-fabric/issues/new?template=bug_report.md)
 
 ---
 
@@ -106,7 +106,7 @@ Skills are organized by **persona** and **intent**, enabling both focused and en
 Always start by connecting to the **Skills for Fabric** marketplace
 
 ```bash
-/plugin marketplace add microsoft/skills-for-fabric
+/plugin marketplace add stephengodderidge/skills-for-fabric
 ```
 
 #### Install all skills
@@ -138,7 +138,7 @@ Always start by connecting to the **Skills for Fabric** marketplace
 ### Manual Installation
 
 ```bash
-git clone https://github.com/microsoft/skills-for-fabric.git
+git clone https://github.com/stephengodderidge/skills-for-fabric.git
 cd skills-for-fabric
 ```
 

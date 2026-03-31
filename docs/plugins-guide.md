@@ -41,7 +41,7 @@ plugins/
     "../../skills/spark-authoring-cli"
   ],
   "mcpServers": {},
-  "repository": "https://github.com/microsoft/skills-for-fabric",
+  "repository": "https://github.com/stephengodderidge/skills-for-fabric",
   "keywords": ["fabric", "microsoft-fabric", "authoring"],
   "license": "MIT"
 }
@@ -82,16 +82,16 @@ Users can install the full bundle or individual plugins:
 
 ```bash
 # Full bundle (all skills)
-/plugin install microsoft/skills-for-fabric
+/plugin install stephengodderidge/skills-for-fabric
 
 # Authoring plugin only
-/plugin install microsoft/skills-for-fabric/authoring
+/plugin install stephengodderidge/skills-for-fabric/authoring
 
 # Consumption plugin only
-/plugin install microsoft/skills-for-fabric/consumption
+/plugin install stephengodderidge/skills-for-fabric/consumption
 
 # Filter by endpoint
-/plugin install microsoft/skills-for-fabric --filter "sqldw-*"
+/plugin install stephengodderidge/skills-for-fabric --filter "sqldw-*"
 ```
 
 ## Adding a Skill to a Plugin
