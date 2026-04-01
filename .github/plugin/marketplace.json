@@ -61,7 +61,7 @@
         "./agents/FabricAppDev.agent.md"
       ],
       "mcpServers": {},
-      "repository": "https://github.com/microsoft/skills-for-fabric",
+      "repository": "https://github.com/stephengodderidge/skills-for-fabric",
       "keywords": [
         "fabric",
         "microsoft-fabric",
@@ -91,7 +91,7 @@
         "./agents/FabricAppDev.agent.md"
       ],
       "mcpServers": {},
-      "repository": "https://github.com/microsoft/skills-for-fabric",
+      "repository": "https://github.com/stephengodderidge/skills-for-fabric",
       "keywords": [
         "fabric",
         "microsoft-fabric",

@@ -1,10 +1,10 @@
 {
-  "name": "@microsoft/skills-for-fabric",
+  "name": "@stephengodderidge/skills-for-fabric",
   "version": "0.2.6",
   "description": "AI coding assistant skills for Microsoft Fabric developers and consumers",
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/skills-for-fabric.git"
+    "url": "https://github.com/stephengodderidge/skills-for-fabric.git"
   },
   "keywords": [
     "fabric",
@@ -21,9 +21,9 @@
   "author": "Microsoft",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/microsoft/skills-for-fabric/issues"
+    "url": "https://github.com/stephengodderidge/skills-for-fabric/issues"
   },
-  "homepage": "https://github.com/microsoft/skills-for-fabric#readme",
+  "homepage": "https://github.com/stephengodderidge/skills-for-fabric#readme",
   "files": [
     "agents/**",
     "skills/**",
