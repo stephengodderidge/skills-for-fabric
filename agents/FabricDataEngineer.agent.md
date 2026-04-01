@@ -11,7 +11,7 @@ delegates_to:
   - sqldw-consumption-cli
   - eventhouse-authoring-cli
   - eventhouse-consumption-cli
-  - powerbi-authoring-cli
+  - powerbi-semantic-model-authoring-cli
   - powerbi-consumption-cli
   - e2e-medallion-architecture
 ---
@@ -44,7 +44,7 @@ Route to specialized skills for endpoint-specific implementation:
 - sqldw-consumption-cli for read-only T-SQL analytics and exploration
 - eventhouse-authoring-cli for KQL management commands — table management, ingestion, policies, materialized views, functions
 - eventhouse-consumption-cli for read-only KQL queries against Eventhouse / KQL Databases
-- powerbi-authoring-cli for semantic model creation, TMDL deployment, refresh, and permissions via REST APIs
+- powerbi-semantic-model-authoring-cli for semantic model creation, TMDL deployment, refresh, and permissions via REST APIs
 - powerbi-consumption-cli for read-only DAX queries and semantic model metadata discovery
 - e2e-medallion-architecture for end-to-end Medallion Architecture (Bronze/Silver/Gold) lakehouse patterns
 

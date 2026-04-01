@@ -67,7 +67,7 @@ skills-for-fabric/
 │   ├── check-updates/
 │   ├── eventhouse-authoring-cli/
 │   ├── eventhouse-consumption-cli/
-│   ├── powerbi-authoring-cli/
+│   ├── powerbi-semantic-model-authoring-cli/
 │   ├── powerbi-consumption-cli/
 │   ├── spark-authoring-cli/
 │   ├── spark-consumption-cli/

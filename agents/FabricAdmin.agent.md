@@ -12,7 +12,7 @@ delegates_to:
 - sqldw-consumption-cli
 - eventhouse-authoring-cli
 - eventhouse-consumption-cli
-- powerbi-authoring-cli
+- powerbi-semantic-model-authoring-cli
 - powerbi-consumption-cli
 - e2e-medallion-architecture
 ---

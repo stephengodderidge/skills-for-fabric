@@ -176,7 +176,7 @@ Use a single `ExecuteQuery` capability with payload concepts:
 - **Do not use `INFO` DAX functions to retrieve role memberships**
   - **Issue:** `INFO.ROLEMEMBERSHIPS()` returns empty or incomplete results.
   - **Cause:** Role members are assigned at the service level (Entra ID) after deployment, not in the model definition — so DAX `INFO` functions cannot reliably surface them.
-  - **Fix:** Use the Power BI REST API instead. See [powerbi-authoring-cli § Security Role Memberships](../powerbi-authoring-cli/SKILL.md#security-role-memberships).
+  - **Fix:** Use the Power BI REST API instead. See [powerbi-semantic-model-authoring-cli § Security Role Memberships](../powerbi-semantic-model-authoring-cli/SKILL.md#security-role-memberships).
 
 ## Examples
 

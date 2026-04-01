@@ -1,5 +1,5 @@
 ---
-name: powerbi-authoring-cli
+name: powerbi-semantic-model-authoring-cli
 description: >
   Create, manage, and deploy Power BI semantic models inside Microsoft Fabric workspaces via `az rest` CLI against Fabric and Power BI REST APIs. Use when the user wants to:
   (1) create a semantic model from TMDL definition files,

@@ -30,7 +30,7 @@ This catalog lists all available skills-for-fabric with their purpose and trigge
 | [e2e-medallion-architecture](#e2e-medallion-architecture) | End-to-End | Implement end-to-end Medallion Architecture (Bronze/Silver/G... |
 | [eventhouse-authoring-cli](#eventhouse-authoring-cli) | Authoring | Execute KQL management commands (table management, ingestion... |
 | [eventhouse-consumption-cli](#eventhouse-consumption-cli) | Consumption | Run KQL queries against Fabric Eventhouse for real-time inte... |
-| [powerbi-authoring-cli](#powerbi-authoring-cli) | Authoring | Create, manage, and deploy Power BI semantic models inside M... |
+| [powerbi-semantic-model-authoring-cli](#powerbi-semantic-model-authoring-cli) | Authoring | Create, manage, and deploy Power BI semantic models inside M... |
 | [powerbi-consumption-cli](#powerbi-consumption-cli) | Consumption | The ONLY supported path for read-only Microsoft Fabric Power... |
 | [spark-authoring-cli](#spark-authoring-cli) | Authoring | Develop Microsoft Fabric Spark/data engineering workflows wi... |
 | [spark-consumption-cli](#spark-consumption-cli) | Consumption | Analyze lakehouse data interactively using Fabric Livy sessi... |
@@ -79,13 +79,13 @@ This catalog lists all available skills-for-fabric with their purpose and trigge
 
 ---
 
-## powerbi-authoring-cli
+## powerbi-semantic-model-authoring-cli
 
 **Type:** Authoring
 
 **Purpose:** Create, manage, and deploy Power BI semantic models inside Microsoft Fabric workspaces via `az rest` CLI against Fabric and Power BI REST APIs.
 
-**Location:** `skills/powerbi-authoring-cli/`
+**Location:** `skills/powerbi-semantic-model-authoring-cli/`
 
 ---
 
@@ -145,7 +145,7 @@ This catalog lists all available skills-for-fabric with their purpose and trigge
 
 | Type | Skills |
 |------|--------|
-| Authoring | eventhouse-authoring-cli, powerbi-authoring-cli, spark-authoring-cli, sqldw-authoring-cli |
+| Authoring | eventhouse-authoring-cli, powerbi-semantic-model-authoring-cli, spark-authoring-cli, sqldw-authoring-cli |
 | Consumption | eventhouse-consumption-cli, powerbi-consumption-cli, spark-consumption-cli, sqldw-consumption-cli |
 | End-to-End | e2e-medallion-architecture |
 | Utility | check-updates |

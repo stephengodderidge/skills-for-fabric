@@ -218,7 +218,7 @@ Build a semantic model on top of the Gold lakehouse, using DirectLake.
    ```sql
    SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'nyc_taxi_daily_summary'
    ```
-3. **Create a semantic model** — use the [powerbi-authoring-cli](../powerbi-authoring-cli/SKILL.md) skill for semantic model creation and TMDL deployment. Create via `POST /v1/workspaces/{workspaceId}/items` with `type: "SemanticModel"` then deploy definition via `updateDefinition` using TMDL format (see [ITEM-DEFINITIONS-CORE.md § SemanticModel](../../common/ITEM-DEFINITIONS-CORE.md#semanticmodel)):
+3. **Create a semantic model** — use the [powerbi-semantic-model-authoring-cli](../powerbi-semantic-model-authoring-cli/SKILL.md) skill for semantic model creation and TMDL deployment. Create via `POST /v1/workspaces/{workspaceId}/items` with `type: "SemanticModel"` then deploy definition via `updateDefinition` using TMDL format (see [ITEM-DEFINITIONS-CORE.md § SemanticModel](../../common/ITEM-DEFINITIONS-CORE.md#semanticmodel)):
    - The model must reference the Gold lakehouse SQL endpoint as its data source
    - Define a table mapping to the Gold summary table (e.g., `nyc_taxi_daily_summary`)
    - Use **Direct Lake** mode — this connects directly to Delta tables in OneLake without data import
@@ -235,7 +235,7 @@ Build a semantic model on top of the Gold lakehouse, using DirectLake.
 - **Wait for SQL endpoint provisioning** — status must be `Success` before connecting; newly created lakehouses may take minutes to provision
 - **Prefer Direct Lake mode** — avoids data duplication; semantic model reads directly from OneLake Delta tables
 - **Match table/column names exactly** — the semantic model table definition must use the exact Delta table and column names from the Gold lakehouse
-- **For semantic model authoring** (TMDL, refresh, permissions), cross-reference the [powerbi-authoring-cli](../powerbi-authoring-cli/SKILL.md) skill
+- **For semantic model authoring** (TMDL, refresh, permissions), cross-reference the [powerbi-semantic-model-authoring-cli](../powerbi-semantic-model-authoring-cli/SKILL.md) skill
 - **For DAX query validation**, cross-reference the [powerbi-consumption-cli](../powerbi-consumption-cli/SKILL.md) skill
 
 ---
