@@ -60,7 +60,12 @@
         "./agents/FabricDataEngineer.agent.md",
         "./agents/FabricAppDev.agent.md"
       ],
-      "mcpServers": {},
+      "mcpServers": {
+        "powerbi-modeling": {
+          "command": "npx",
+          "args": ["@microsoft/powerbi-modeling-mcp"]
+        }
+      },
       "repository": "https://github.com/stephengodderidge/skills-for-fabric",
       "keywords": [
         "fabric",
