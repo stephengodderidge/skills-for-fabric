@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Restored automated skill quality and generated catalog validation.
 - New `skills/eventhouse-consumption-cli/` — Read-only KQL queries against Fabric Eventhouse and KQL Databases via `az rest`
 - New `skills/eventhouse-authoring-cli/` — KQL management commands (table management, ingestion, policies, materialized views, functions) via `az rest`
 - New `common/EVENTHOUSE-CONSUMPTION-CORE.md` — KQL query patterns, operators, data types, performance best practices
@@ -24,6 +25,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hybrid architecture documentation updates describing Agents → Skills → Common layering and the skill-vs-agent decision framework.
 
 ### Changed
+- Added semantic-model authoring to the complete and authoring plugin bundles.
+- Aligned update checks on a once-per-session policy and corrected repository examples.
+- Reduced semantic-model authoring context by moving detailed CLI recipes to reference documentation.
+- Documented the FabricAppDev agent consistently.
 - Updated contributor and compatibility documentation to reflect agent-based orchestration in addition to skills.
 
 ## [0.1.6] - 2026-02-10

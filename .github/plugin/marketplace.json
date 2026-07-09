@@ -17,6 +17,7 @@
       "skills": [
         "./skills/check-updates",
         "./skills/powerbi-consumption-cli",
+        "./skills/powerbi-semantic-model-authoring-cli",
         "./skills/sqldw-consumption-cli",
         "./skills/sqldw-authoring-cli",
         "./skills/spark-consumption-cli",
@@ -50,6 +51,7 @@
       "version": "0.2.6",
       "skills": [
         "./skills/check-updates",
+        "./skills/powerbi-semantic-model-authoring-cli",
         "./skills/sqldw-authoring-cli",
         "./skills/spark-authoring-cli",
         "./skills/eventhouse-authoring-cli",

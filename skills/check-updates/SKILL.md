@@ -14,32 +14,13 @@ This skill checks for updates to the skills-for-fabric marketplace at the start 
 
 ## When to Run
 
-Run this check **once per week** when any skills-for-fabric skill is first invoked. Skip if already checked within the last 7 days.
+Run this check **once per session** when any skills-for-fabric skill is first invoked. Skip if already checked in the current session.
 
 ## Session State
 
-The update check marker is stored in a **persistent, user-level directory** shared across all sessions and all plugins in the Fabric Skills marketplace:
+Track completion in the agent's **current session state**. Do not use a persistent marker: a previous session's result must not suppress the mandatory check in a new session.
 
-```text
-~/.config/fabric-collection/last-update-check.json
-```
-  
-This file contains a JSON object mapping plugin names to the **UTC date** (YYYY-MM-DD) of their last update check:
-
-```json
-{
-  "skills-for-fabric": "2026-02-17",
-  "another-plugin": "2026-02-16"
-}
-```
-
-Before checking, read `~/.config/fabric-collection/last-update-check.json`:
-- If the file exists and the entry for the current plugin is within the last **7 days** (compared to the current **UTC date**), skip the check.
-- If the file is missing, the plugin entry is absent, or the date is more than 7 days old (compared to the current **UTC date**), run the update check.
-
-> **IMPORTANT — use UTC consistently**: Always use the current UTC date when saving and comparing the last-update-check timestamp. Do not use the local system timezone, as it varies across environments and can cause the check to run too often or be skipped. In shell, use `date -u +%Y-%m-%d` (Linux/macOS) or `(Get-Date).ToUniversalTime().ToString("yyyy-MM-dd")` (PowerShell).
-
-> **Note**: Create the `~/.config/fabric-collection/` directory if it does not exist. On Windows, use `$env:USERPROFILE\.config\fabric-collection\`.
+If the check has already completed earlier in the current conversation/session, proceed without repeating it.
 
 ## Update Check Procedure
 
@@ -56,7 +37,7 @@ plugin.json → "repository": "https://github.com/<owner>/<repo>"
 package.json → "repository.url": "https://github.com/<owner>/<repo>.git"
 ```
 
-> **CRITICAL**: Use the owner string **exactly as it appears** in the URL. Do NOT alter, normalize, or "correct" the owner name (e.g., do NOT replace underscores with hyphens). The owner `bocrivat_microsoft` uses an **underscore** — this is intentional and correct.
+> **CRITICAL**: Use the owner string **exactly as it appears** in the URL. Do not alter or normalize it.
 
 ### Step 3: Fetch Latest Release
 
@@ -85,7 +66,7 @@ get_file_contents(owner: "<owner>", repo: "<repo>", path: "package.json")
 
 For this repository, the correct call is:
 ```text
-get_file_contents(owner: "bocrivat_microsoft", repo: "skills-for-fabric", path: "package.json")
+get_file_contents(owner: "stephengodderidge", repo: "skills-for-fabric", path: "package.json")
 ```
 
 Extract the `version` field from the response. This method works with private repositories because MCP tools use authenticated GitHub access.
@@ -151,13 +132,13 @@ git pull
 Would you like to update now? (The current skill will still work)
 ```
 
-### Step 6: Set Update Marker
+### Step 6: Mark the Session
 
-After completing the check (regardless of result), update `~/.config/fabric-collection/last-update-check.json` with today's **UTC date** (YYYY-MM-DD) for the current plugin. Create the directory and file if they don't exist. Preserve entries for other plugins already in the file.
+After completing the check (regardless of result), record in current session state that the update check ran. Do not write a cross-session marker.
 
 ## Must
 
-- Check for updates only once per week (based on UTC calendar date, not session lifetime or local timezone)
+- Check for updates once per session
 - Always proceed with the requested skill after the check (non-blocking)
 - Handle network errors gracefully (show warning, continue with skill)
 - Display the CHANGELOG.md content for versions between current and latest
@@ -167,13 +148,13 @@ After completing the check (regardless of result), update `~/.config/fabric-coll
 - Use Git CLI (Method A) or GitHub MCP tools (Method B) for version checking — these work with private repos
 - Fall back to the public GitHub REST API (Method C) **only** if Methods A and B both fail
 - Show a concise summary rather than overwhelming detail
-- Cache the check result in `~/.config/fabric-collection/last-update-check.json`
+- Keep the check result in current session state
 - Provide copy-pasteable update commands
 
 ## Avoid
 
 - Blocking the user from using skills if update check fails
-- Checking on every skill invocation (once per week is sufficient)
+- Repeating the check after it has already completed in the current session
 - Attempting Method C (public API) before trying Methods A or B
 - Relying solely on unauthenticated public API calls (will fail for private repos)
 - Auto-updating without user consent
