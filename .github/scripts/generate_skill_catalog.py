@@ -3,7 +3,7 @@
 Skill Catalog Generator
 
 Auto-generates docs/skill-catalog.md from skills/*/SKILL.md frontmatter.
-Run on PR or as pre-commit hook to keep catalog in sync.
+CI verifies the generated catalog on pull requests.
 
 Usage:
     python generate_skill_catalog.py           # Generate catalog
@@ -28,7 +28,7 @@ CATALOG_HEADER = """<!--
   
     python .github/scripts/generate_skill_catalog.py
   
-  Or commit your changes - the pre-commit hook will regenerate this file.
+  CI verifies that the generated catalog stays in sync.
   
   Last generated: {timestamp}
 -->
@@ -42,7 +42,7 @@ This catalog lists all available skills-for-fabric with their purpose and trigge
 > To update this catalog:
 > 1. Modify the source `skills/*/SKILL.md` files
 > 2. Run `python .github/scripts/generate_skill_catalog.py`
-> 3. Or simply commit - the pre-commit hook will regenerate it
+> 3. CI will verify that the generated catalog is current
 
 """
 

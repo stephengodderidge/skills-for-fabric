@@ -6,9 +6,9 @@
   
     python .github/scripts/generate_skill_catalog.py
   
-  Or commit your changes - the pre-commit hook will regenerate this file.
+  CI verifies that the generated catalog stays in sync.
   
-  Last generated: 2026-03-09 04:36 UTC
+  Last generated: 2026-07-09 21:37 UTC
 -->
 
 # Skill Catalog
@@ -20,7 +20,7 @@ This catalog lists all available skills-for-fabric with their purpose and trigge
 > To update this catalog:
 > 1. Modify the source `skills/*/SKILL.md` files
 > 2. Run `python .github/scripts/generate_skill_catalog.py`
-> 3. Or simply commit - the pre-commit hook will regenerate it
+> 3. CI will verify that the generated catalog is current
 
 ## Overview
 
@@ -30,8 +30,8 @@ This catalog lists all available skills-for-fabric with their purpose and trigge
 | [e2e-medallion-architecture](#e2e-medallion-architecture) | End-to-End | Implement end-to-end Medallion Architecture (Bronze/Silver/G... |
 | [eventhouse-authoring-cli](#eventhouse-authoring-cli) | Authoring | Execute KQL management commands (table management, ingestion... |
 | [eventhouse-consumption-cli](#eventhouse-consumption-cli) | Consumption | Run KQL queries against Fabric Eventhouse for real-time inte... |
-| [powerbi-semantic-model-authoring-cli](#powerbi-semantic-model-authoring-cli) | Authoring | Create, manage, and deploy Power BI semantic models inside M... |
 | [powerbi-consumption-cli](#powerbi-consumption-cli) | Consumption | The ONLY supported path for read-only Microsoft Fabric Power... |
+| [powerbi-semantic-model-authoring-cli](#powerbi-semantic-model-authoring-cli) | Authoring | Create, manage, and deploy Power BI semantic models in Micro... |
 | [spark-authoring-cli](#spark-authoring-cli) | Authoring | Develop Microsoft Fabric Spark/data engineering workflows wi... |
 | [spark-consumption-cli](#spark-consumption-cli) | Consumption | Analyze lakehouse data interactively using Fabric Livy sessi... |
 | [sqldw-authoring-cli](#sqldw-authoring-cli) | Authoring | Execute authoring T-SQL (DDL, DML, data ingestion, transacti... |
@@ -79,16 +79,6 @@ This catalog lists all available skills-for-fabric with their purpose and trigge
 
 ---
 
-## powerbi-semantic-model-authoring-cli
-
-**Type:** Authoring
-
-**Purpose:** Create, manage, and deploy Power BI semantic models inside Microsoft Fabric workspaces via `az rest` CLI against Fabric and Power BI REST APIs.
-
-**Location:** `skills/powerbi-semantic-model-authoring-cli/`
-
----
-
 ## powerbi-consumption-cli
 
 **Type:** Consumption
@@ -96,6 +86,16 @@ This catalog lists all available skills-for-fabric with their purpose and trigge
 **Purpose:** The ONLY supported path for read-only Microsoft Fabric Power BI semantic model (formerly "Power BI dataset") query interactions. Execute DAX queries via the MCP server ExecuteQuery tool to: (1) discover semantic model metadata (tables, columns, measures, relationships, hierarchies, etc.) and their properties, (2) retrieve data from a semantic model.
 
 **Location:** `skills/powerbi-consumption-cli/`
+
+---
+
+## powerbi-semantic-model-authoring-cli
+
+**Type:** Authoring
+
+**Purpose:** Create, manage, and deploy Power BI semantic models in Microsoft Fabric with the Fabric Items API, Power BI REST APIs, TMDL, and `az rest`. Covers full definition lifecycle, refresh, data sources, parameters, permissions, role memberships, and deployment pipelines. Route read-only DAX queries to `powerbi-consumption-cli` and fine-grained object edits to `powerbi-modeling-mcp`.
+
+**Location:** `skills/powerbi-semantic-model-authoring-cli/`
 
 ---
 

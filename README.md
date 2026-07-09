@@ -209,6 +209,7 @@ Agents orchestrate **multiple skills across workloads**.
 |---|---|
 | FabricDataEngineer | Medallion architectures, ETL/ELT, migration, data quality |
 | FabricAdmin | Capacity, governance, security, cost, observability |
+| FabricAppDev | Full-stack applications that consume Fabric data and APIs |
 
 Agent definitions live in `agents/`.
 
