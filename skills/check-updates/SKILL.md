@@ -136,6 +136,16 @@ Would you like to update now? (The current skill will still work)
 
 After completing the check (regardless of result), record in current session state that the update check ran. Do not write a cross-session marker.
 
+## Examples
+
+- **Versions match:** report that `skills-for-fabric` is up to date, mark the
+  current session, and continue with the originally requested skill.
+- **Remote version is newer:** summarize intervening `CHANGELOG.md` entries,
+  show the installation-specific update command, ask before updating, and
+  continue even if the user declines.
+- **Remote lookup fails:** show a concise warning, mark the attempted check for
+  the current session, and continue without blocking the requested skill.
+
 ## Must
 
 - Check for updates once per session
